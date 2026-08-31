@@ -8,4 +8,9 @@
 3. Зафиксируете в документации план работ, адресное пространство, схему сети, настройки (если перенесли на оборудование)
 
 Стенд был развернут на эмуляторе EVE-NG Community Edition 6.2.0-4. Для работы использовались следующие образы:
-Cisco IOL 
+- Cisco IOL (x86_64_crb_linux_l2-adventerprisek9-ms.bin)
+- Arista vEOS Switch (veos-4.34.0F)
+
+### Топология сети
+
+![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab1/topology.png "Текст заголовка логотипа 1")
