@@ -55,3 +55,114 @@
 | Leaf3 | Eth1 | 10.0.16.5/31|  |  |
 | Leaf3 | Eth2 | 10.0.16.11/31 |  |  |
 
+
+#### Конфигурация на устройствах
+
+>Spine1
+
+hostname spine1
+
+interface Ethernet1
+   no switchport
+   ip address 10.0.16.0/31
+!
+interface Ethernet2
+   no switchport
+   ip address 10.0.16.2/31
+!
+interface Ethernet3
+   no switchport
+   ip address 10.0.16.4/31
+!
+interface Loopback0
+   ip address 10.0.0.1/32
+!
+interface Loopback1
+   ip address 10.0.1.1/32
+   
+
+Spine2
+
+hostname spine2
+
+interface Ethernet1
+   no switchport
+   ip address 10.0.16.6/31
+!
+interface Ethernet2
+   no switchport
+   ip address 10.0.16.8/31
+!
+interface Ethernet3
+   no switchport
+   ip address 10.0.16.10/31
+!
+interface Loopback0
+   ip address 10.0.0.2/32
+!
+interface Loopback1
+   ip address 10.0.1.2/32
+   
+
+Leaf1
+
+hostname Leaf1
+
+interface Ethernet1
+   no switchport
+   ip address 10.0.16.1/31
+!
+interface Ethernet2
+   no switchport
+   ip address 10.0.16.9/31
+!
+interface Ethernet3
+!
+interface Loopback0
+   ip address 10.0.0.3/32
+!
+interface Loopback1
+   ip address 10.0.1.3/32
+!
+
+Leaf2
+
+hostname Leaf2
+
+interface Ethernet1
+   no switchport
+   ip address 10.0.16.3/31
+!
+interface Ethernet2
+   no switchport
+   ip address 10.0.16.9/31
+!
+interface Ethernet3
+!
+interface Loopback0
+   ip address 10.0.0.4/32
+!
+interface Loopback1
+   ip address 10.0.1.4/32
+!
+
+
+Leaf3
+
+hostname Leaf3
+
+interface Ethernet1
+   no switchport
+   ip address 10.0.16.5/31
+!
+interface Ethernet2
+   no switchport
+   ip address 10.0.16.11/31
+!
+
+interface Loopback0
+   ip address 10.0.0.5/32
+!
+interface Loopback1
+   ip address 10.0.1.5/32
+!
