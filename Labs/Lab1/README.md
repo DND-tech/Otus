@@ -115,7 +115,7 @@ interface Ethernet1
 !
 interface Ethernet2
    no switchport
-   ip address 10.0.16.9/31
+   ip address 10.0.16.7/31
 !
 interface Ethernet3
 !
