@@ -58,7 +58,8 @@
 
 #### Конфигурация на устройствах
 
->Spine1
+'''
+Spine1
 
 hostname spine1
 
@@ -166,3 +167,4 @@ interface Loopback0
 interface Loopback1
    ip address 10.0.1.5/32
 !
+'''
