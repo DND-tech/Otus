@@ -80,6 +80,7 @@ interface Ethernet1
    ip address 10.0.16.0/31
    ip ospf neighbor bfd
    ip ospf network point-to-point
+   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
    ip ospf area 0.0.0.0
 !
 interface Ethernet2
@@ -88,6 +89,7 @@ interface Ethernet2
    ip address 10.0.16.2/31
    ip ospf neighbor bfd
    ip ospf network point-to-point
+   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
    ip ospf area 0.0.0.0
 !
 interface Ethernet3
@@ -96,6 +98,7 @@ interface Ethernet3
    ip address 10.0.16.4/31
    ip ospf neighbor bfd
    ip ospf network point-to-point
+   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
    ip ospf area 0.0.0.0
 !
 interface Loopback0
@@ -124,6 +127,7 @@ interface Ethernet1
    ip address 10.0.16.6/31
    ip ospf neighbor bfd
    ip ospf network point-to-point
+   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
    ip ospf area 0.0.0.0
 !
 interface Ethernet2
@@ -132,6 +136,7 @@ interface Ethernet2
    ip address 10.0.16.8/31
    ip ospf neighbor bfd
    ip ospf network point-to-point
+   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
    ip ospf area 0.0.0.0
 !
 interface Ethernet3
@@ -140,6 +145,7 @@ interface Ethernet3
    ip address 10.0.16.10/31
    ip ospf neighbor bfd
    ip ospf network point-to-point
+   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
    ip ospf area 0.0.0.0
 !
 interface Loopback0
@@ -171,6 +177,7 @@ interface Ethernet1
    ip address 10.0.16.1/31
    ip ospf neighbor bfd
    ip ospf network point-to-point
+   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
    ip ospf area 0.0.0.0
 !
 interface Ethernet2
@@ -179,6 +186,7 @@ interface Ethernet2
    ip address 10.0.16.7/31
    ip ospf neighbor bfd
    ip ospf network point-to-point
+   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
    ip ospf area 0.0.0.0
 !
 interface Ethernet3
@@ -213,6 +221,7 @@ interface Ethernet1
    ip address 10.0.16.3/31
    ip ospf neighbor bfd
    ip ospf network point-to-point
+   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
    ip ospf area 0.0.0.0
 !
 interface Ethernet2
@@ -221,6 +230,7 @@ interface Ethernet2
    ip address 10.0.16.9/31
    ip ospf neighbor bfd
    ip ospf network point-to-point
+   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
    ip ospf area 0.0.0.0
 !
 
