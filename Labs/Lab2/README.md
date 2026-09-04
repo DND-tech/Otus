@@ -1,4 +1,4 @@
-# астроить OSPF для Underlay сети
+# Настроить OSPF для Underlay сети
 
 ## Цель:
 
