@@ -14,8 +14,6 @@
 
 ![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab1/topology.png "Текст заголовка логотипа 1")
 
-Схему сети и адресацию будем брать из [Лабораторной работы №1.Проектирование адресного пространства](https://github.com/DND-tech/Otus/tree/main/Labs/Lab1) но для удобства напомню ее ниже:
-
 #### План адресации
 Под данную схему была выделяна сеть по 16 маске. Внутри /16 были нарезаны следующие сети:
 
@@ -33,16 +31,16 @@
 
 | Device | Port | IP | Comment |
 | -------|:------|----|--------|
-| Spane1 | lo | 10.0.0.1 |  |
-| Spane1 | lo1 | 10.0.1.1  |  |  |
-| Spane1 | Eth1 | 10.0.16.0/31|  |  |
-| Spane1 | Eth2 | 10.0.16.2/31 |  |  |
-| Spane1 | Eth3 | 10.0.16.4/31 |  |  |
-| Spane2 | lo | 10.0.0.2 |  |
-| Spane2 | lo1 | 10.0.1.2  |  |  |
-| Spane2 | Eth1 | 10.0.16.6/31|  |  |
-| Spane2 | Eth2 | 10.0.16.8/31 |  |  |
-| Spane2 | Eth3 | 10.0.16.10/31 |  |  |
+| Spine1 | lo | 10.0.0.1 |  |
+| Spine1 | lo1 | 10.0.1.1  |  |  |
+| Spine1 | Eth1 | 10.0.16.0/31|  |  |
+| Spine1 | Eth2 | 10.0.16.2/31 |  |  |
+| Spine1 | Eth3 | 10.0.16.4/31 |  |  |
+| Spine2 | lo | 10.0.0.2 |  |
+| Spine2 | lo1 | 10.0.1.2  |  |  |
+| Spine2 | Eth1 | 10.0.16.6/31|  |  |
+| Spine2 | Eth2 | 10.0.16.8/31 |  |  |
+| Spine2 | Eth3 | 10.0.16.10/31 |  |  |
 | Leaf1 | lo | 10.0.0.3 |  |
 | Leaf1 | lo1 | 10.0.1.3  |  |  |
 | Leaf1 | Eth1 | 10.0.16.1/31|  |  |
@@ -58,13 +56,14 @@
 
 #### Параметры IS-IS
 
-В конфигурации OSPF будут настроены следующие параметры:
-- В нашей топологии все устройства Underlay — Spine1, Spine2, Leaf1, Leaf2 и Leaf3 — будут работать в одной OSPF Backbone Area 0.0.0.0.
-- Ручная настройка Router ID.
+В конфигурации IS-IS будут настроены следующие параметры:
+- Area: 0001
+- Instance: UNDERLAY
 - BFD
-- OSPF Authentication
-- OSPF network type P2P
+- Level-2 IS-IS
+- Network type P2P
 - Passive-interface default
+- IS-IS Authentication
 - На Leaf устройствах будет включен mstp
 
 
