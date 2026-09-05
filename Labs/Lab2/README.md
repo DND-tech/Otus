@@ -292,4 +292,9 @@ router ospf 1
    max-lsa 12000
 !
 ```
+Проверим работу интерфейсов и соседей OSPF на Spine1 и Spine2.
+
+
+![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab1/topology.png "Spine1")
+
 
