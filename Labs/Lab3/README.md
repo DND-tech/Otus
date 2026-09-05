@@ -59,11 +59,9 @@
 В конфигурации IS-IS будут настроены следующие параметры:
 - Area: 0001
 - Instance: UNDERLAY
-- BFD
-- Level-1 IS-IS
+- Level-1-2 IS-IS
 - Network type P2P
 - Passive-interface default
-- IS-IS Authentication
 - На Leaf устройствах будет включен mstp
 - NET:
 
@@ -277,13 +275,15 @@ router isis UNDERLAY
    address-family ipv4 unicast
 !
 ```
-Проверим работу интерфейсов и соседей OSPF на Spine1 и Spine2.
+Проверим работу интерфейсов, соседей и маршруты IS-IS на Spine1 и Spine2.
 
 * Spine1
 ![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab3/is-is_spine1.png "Spine1")
 
+![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab3/is-is_routes_spine1.png "Spine1")
 * Spine2
 ![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab3/is-is_spine1.png "Spine2")
 
+![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab3/is-is_routes_spine2.png "Spine1")
 
  По результату работу наблюдаю сетевую доступность между spine/leaf нодами.
