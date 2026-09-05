@@ -294,9 +294,10 @@ router ospf 1
 ```
 Проверим работу интерфейсов и соседей OSPF на Spine1 и Spine2.
 
-
+* Spine1
 ![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab2/ospf_spine1.png "Spine1")
 
+* Spine2
 ![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab2/ospf_spine2.png "Spine2")
 
 
