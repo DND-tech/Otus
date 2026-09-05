@@ -83,95 +83,86 @@ Spine1
 hostname spine1
 !
 interface Ethernet1
-   mtu 9214
+   mtu 9000
    no switchport
    ip address 10.0.16.0/31
-   ip ospf neighbor bfd
-   ip ospf network point-to-point
-   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
-   ip ospf area 0.0.0.0
+   isis enable UNDERLAY
+   isis network point-to-point
 !
 interface Ethernet2
-   mtu 9214
+   mtu 9000
    no switchport
    ip address 10.0.16.2/31
-   ip ospf neighbor bfd
-   ip ospf network point-to-point
-   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
-   ip ospf area 0.0.0.0
+   isis enable UNDERLAY
+   isis network point-to-point
 !
 interface Ethernet3
-   mtu 9214
+   mtu 9000
    no switchport
    ip address 10.0.16.4/31
-   ip ospf neighbor bfd
-   ip ospf network point-to-point
-   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
-   ip ospf area 0.0.0.0
+   isis enable UNDERLAY
+   isis network point-to-point
 !
 interface Loopback0
    ip address 10.0.0.1/32
-   ip ospf area 0.0.0.0
+   isis enable UNDERLAY
 !
 interface Loopback1
    ip address 10.0.1.1/32
-!
-ip routing
-!
-router ospf 1
-   router-id 10.0.0.1
-   max-lsa 12000
-!
-end
-
-Spine2
-
-hostname spine2
-!
-
-interface Ethernet1
-   mtu 9214
-   no switchport
-   ip address 10.0.16.6/31
-   ip ospf neighbor bfd
-   ip ospf network point-to-point
-   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
-   ip ospf area 0.0.0.0
-!
-interface Ethernet2
-   mtu 9214
-   no switchport
-   ip address 10.0.16.8/31
-   ip ospf neighbor bfd
-   ip ospf network point-to-point
-   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
-   ip ospf area 0.0.0.0
-!
-interface Ethernet3
-   mtu 9214
-   no switchport
-   ip address 10.0.16.10/31
-   ip ospf neighbor bfd
-   ip ospf network point-to-point
-   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
-   ip ospf area 0.0.0.0
-!
-interface Loopback0
-   ip address 10.0.0.2/32
-   ip ospf area 0.0.0.0
-!
-interface Loopback1
-   ip address 10.0.1.2/32
+   isis enable UNDERLAY
 !
 interface Management1
 !
 ip routing
 !
-router ospf 1
-   router-id 10.0.0.2
-   max-lsa 12000
+router isis UNDERLAY
+   net 49.0001.0000.0000.0001.00
+   !
+   address-family ipv4 unicast
 !
-end
+!
+Spine2
+
+hostname spine2
+!
+interface Ethernet1
+   mtu 9000
+   no switchport
+   ip address 10.0.16.6/31
+   isis enable UNDERLAY
+   isis network point-to-point
+!
+interface Ethernet2
+   mtu 9000
+   no switchport
+   ip address 10.0.16.8/31
+   isis enable UNDERLAY
+   isis network point-to-point
+!
+interface Ethernet3
+   mtu 9000
+   no switchport
+   ip address 10.0.16.10/31
+   isis enable UNDERLAY
+   isis network point-to-point
+!
+interface Loopback0
+   ip address 10.0.0.2/32
+   isis enable UNDERLAY
+!
+interface Loopback1
+   ip address 10.0.1.2/32
+   isis enable UNDERLAY
+!
+interface Management1
+!
+ip routing
+!
+router isis UNDERLAY
+   net 49.0001.0000.0000.0002.00
+   !
+   address-family ipv4 unicast
+!
 
 Leaf1
 
@@ -180,40 +171,35 @@ hostname Leaf1
 spanning-tree mode mstp
 !
 interface Ethernet1
-   mtu 9214
+   mtu 9000
    no switchport
    ip address 10.0.16.1/31
-   ip ospf neighbor bfd
-   ip ospf network point-to-point
-   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
-   ip ospf area 0.0.0.0
+   isis enable UNDERLAY
+   isis network point-to-point
 !
 interface Ethernet2
-   mtu 9214
+   mtu 9000
    no switchport
    ip address 10.0.16.7/31
-   ip ospf neighbor bfd
-   ip ospf network point-to-point
-   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
-   ip ospf area 0.0.0.0
-!
-interface Ethernet3
-   mtu 9214
+   isis enable UNDERLAY
+   isis network point-to-point
 !
 interface Loopback0
    ip address 10.0.0.3/32
-   ip ospf area 0.0.0.0
+   isis enable UNDERLAY
 !
 interface Loopback1
    ip address 10.0.1.3/32
+   isis enable UNDERLAY
 !
 interface Management1
 !
 ip routing
 !
-router ospf 1
-   router-id 10.0.0.3
-   max-lsa 12000
+router isis UNDERLAY
+   net 49.0001.0000.0000.0003.00
+   !
+   address-family ipv4 unicast
 !
 
 Leaf2
@@ -224,42 +210,35 @@ spanning-tree mode mstp
 !
 
 interface Ethernet1
-   mtu 9214
+   mtu 9000
    no switchport
    ip address 10.0.16.3/31
-   ip ospf neighbor bfd
-   ip ospf network point-to-point
-   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
-   ip ospf area 0.0.0.0
+   isis enable UNDERLAY
+   isis network point-to-point
 !
 interface Ethernet2
-   mtu 9214
+   mtu 9000
    no switchport
    ip address 10.0.16.9/31
-   ip ospf neighbor bfd
-   ip ospf network point-to-point
-   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
-   ip ospf area 0.0.0.0
+   isis enable UNDERLAY
+   isis network point-to-point
 !
-
 interface Loopback0
    ip address 10.0.0.4/32
-   ip ospf area 0.0.0.0
+   isis enable UNDERLAY
 !
 interface Loopback1
    ip address 10.0.1.4/32
-!
-interface Management1
+   isis enable UNDERLAY
+
 !
 ip routing
 !
-
-router ospf 1
-   router-id 10.0.0.4
-   max-lsa 12000
+router isis UNDERLAY
+   net 49.0001.0000.0000.0004.00
+   !
+   address-family ipv4 unicast
 !
-
-
 Leaf3
 
 hostname Leaf3
@@ -267,37 +246,35 @@ hostname Leaf3
 spanning-tree mode mstp
 !
 interface Ethernet1
-   mtu 9214
+   mtu 9000
    no switchport
    ip address 10.0.16.5/31
-   ip ospf neighbor bfd
-   ip ospf network point-to-point
-   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
-   ip ospf area 0.0.0.0
+   isis enable UNDERLAY
+   isis network point-to-point
 !
 interface Ethernet2
-   mtu 9214
+   mtu 9000
    no switchport
    ip address 10.0.16.11/31
-   ip ospf neighbor bfd
-   ip ospf network point-to-point
-   ip ospf authentication-key 7 NpAd/im2FzJE+fPN1hbAvA==
-   ip ospf area 0.0.0.0
+   isis enable UNDERLAY
+   isis network point-to-point
 !
 interface Loopback0
    ip address 10.0.0.5/32
-   ip ospf area 0.0.0.0
+   isis enable UNDERLAY
 !
 interface Loopback1
    ip address 10.0.1.5/32
+   isis enable UNDERLAY
 !
 interface Management1
 !
 ip routing
 !
-router ospf 1
-   router-id 10.0.0.5
-   max-lsa 12000
+router isis UNDERLAY
+   net 49.0001.0000.0000.0005.00
+   !
+   address-family ipv4 unicast
 !
 ```
 Проверим работу интерфейсов и соседей OSPF на Spine1 и Spine2.
