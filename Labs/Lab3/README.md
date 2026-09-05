@@ -60,7 +60,7 @@
 - Area: 0001
 - Instance: UNDERLAY
 - BFD
-- Level-2 IS-IS
+- Level-1 IS-IS
 - Network type P2P
 - Passive-interface default
 - IS-IS Authentication
