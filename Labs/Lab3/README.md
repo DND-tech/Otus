@@ -278,6 +278,7 @@ router isis UNDERLAY
 Проверим работу интерфейсов, соседей и маршруты IS-IS на Spine1 и Spine2.
 
 * Spine1
+
 ![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab3/is-is_spine1.png "Spine1")
 
 
@@ -285,6 +286,7 @@ router isis UNDERLAY
 
 
 * Spine2
+
 ![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab3/is-is_spine1.png "Spine2")
 
 
