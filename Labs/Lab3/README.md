@@ -280,9 +280,13 @@ router isis UNDERLAY
 * Spine1
 ![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab3/is-is_spine1.png "Spine1")
 
+
 ![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab3/is-is_routes_spine1.png "Spine1")
+
+
 * Spine2
 ![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab3/is-is_spine1.png "Spine2")
+
 
 ![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab3/is-is_routes_spine2.png "Spine1")
 
