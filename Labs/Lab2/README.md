@@ -302,3 +302,4 @@ router ospf 1
 ![alt-текст](https://github.com/DND-tech/Otus/blob/main/Labs/Lab2/ospf_spine2.png "Spine2")
 
 
+ По результату работу наблюдаю сетевую доступность между spine/leaf нодами.
